@@ -12,7 +12,7 @@ h1, h2 {
 h2 {
   padding-top: 8rem;
 }
-.wf-inactive {display: none;}
+/*.wf-inactive {display: none;}*/
 .wf-active {display: block;}
 .wrapper {
   box-sizing: border-box;
