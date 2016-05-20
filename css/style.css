@@ -1,0 +1,75 @@
+body {
+  font-family: "proxima-nova",helvetica,arial,verdana,sans-serif;margin:80px 0;
+  font-size: 150%;
+}
+h1 {
+  text-align: center;
+}
+h1, h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+h2 {
+  padding-top: 8rem;
+}
+.wf-inactive {display: none;}
+.wf-active {display: block;}
+.wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.body-text {}
+.board, .statutes, .report {
+  display: flex;
+  flex-flow: row wrap;
+}
+.board-member {
+  margin: auto;
+}
+.board-member, .pdf-file {
+  flex-basis: auto;
+  width: 33.333%;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.board-member .name {
+  font-weight: bold;
+}
+.board-member .post {
+  font-weight: normal;
+}
+.ceo {
+  text-align: center;
+  clear: both;
+}
+.pdf-file {
+  text-decoration: none;
+  float: left;
+  display: block;
+  color: black;
+  text-align: center; 
+}
+.pdf-file i {
+  font-size: 3rem;
+  display: block;
+  padding-bottom: 0.5rem;
+}
+.report {
+  clear: both;
+}
+@media only screen and (max-width: 600px) {
+  body{
+    /*font-size: 100%;*/
+  }
+  .board, .statutes, .report {
+    display: block;
+  }
+  .board-member, .pdf-file {
+    width: 100%;
+  }
+}
