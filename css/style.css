@@ -1,45 +1,62 @@
 body {
   font-family: "proxima-nova",helvetica,arial,verdana,sans-serif;margin:80px 0;
   font-size: 150%;
+  line-height: 160%;
 }
 h1, h2 {
   text-align: center;
   text-transform: uppercase;
 }
+h1{
+  margin-bottom: 0;
+}
 h2 {
   clear: both;
-  padding-top: 8rem;
+  padding-top: 3rem;
+}
+i{
+  color:#E48484;
 }
 /*.wf-inactive {display: none;}*/
 .wf-active {display: block;}
 .wrapper {
   box-sizing: border-box;
   width: 100%;
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 40px;
 }
-.body-text {}
+.body-text {
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: justify;
+}
 .board, .statutes, .report {
   display: flex;
   flex-flow: row wrap;
+  max-width: 750px;
+  margin: 0 auto; 
 }
 .board-member {
   margin: auto;
 }
-.board-member, .pdf-file {
+.board-member{
   flex-basis: auto;
-  width: 33.333%;
+  width: 50%;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   padding: 1rem;
   box-sizing: border-box;
 }
-.board-member .name {
+.name {
   font-weight: bold;
+  line-height: 150%;
 }
-.board-member .post {
+.post {
   font-weight: normal;
+  font-size: 90%;
+  font-style: italic;
+  line-height: 110%;
 }
 .ceo {
   text-align: center;
@@ -50,7 +67,8 @@ h2 {
   float: left;
   display: block;
   color: black;
-  text-align: center; 
+  text-align: center;
+  margin: 0 auto;
 }
 .pdf-file i {
   font-size: 3rem;
@@ -62,12 +80,27 @@ h2 {
 }
 @media only screen and (max-width: 600px) {
   body{
-    /*font-size: 100%;*/
+    font-size: 130%;
   }
+  h1{
+    font-size: 150%;
+  }
+  h2{
+   font-size: 120%; 
+  }
+  h3{
+   font-size: 100%; 
+  }
+}
+
+@media only screen and (max-width: 800px) {
   .board, .statutes, .report {
     display: block;
   }
   .board-member, .pdf-file {
     width: 100%;
+  }
+  .body-text {
+    text-align: left;
   }
 }
