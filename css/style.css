@@ -2,14 +2,12 @@ body {
   font-family: "proxima-nova",helvetica,arial,verdana,sans-serif;margin:80px 0;
   font-size: 150%;
 }
-h1 {
-  text-align: center;
-}
 h1, h2 {
   text-align: center;
   text-transform: uppercase;
 }
 h2 {
+  clear: both;
   padding-top: 8rem;
 }
 /*.wf-inactive {display: none;}*/
