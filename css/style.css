@@ -17,6 +17,9 @@ h2 {
 i{
   color:#E48484;
 }
+i.fa-file-word-o{
+  color:#8784e4;
+}
 /*.wf-inactive {display: none;}*/
 .wf-active {display: block;}
 .wrapper {
