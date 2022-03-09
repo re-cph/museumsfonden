@@ -14,10 +14,10 @@ module.exports = {
       header: ["Gotham", "sans-serif"],
     },
     fontSize: {
-      menu: ["15px", "1.5em"],
-      body: ["18px", "1.5em"],
-      header: ["24px", "1.5em"],
-      title: ["20px", "1.5em"],
+      menu: ["15px", "1.7em"],
+      body: ["18px", "1.7em"],
+      header: ["24px", "1.7em"],
+      title: ["20px", "1.7em"],
     },
     colors: {
       transparent: "transparent",
