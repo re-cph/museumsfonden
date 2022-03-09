@@ -50,8 +50,8 @@ const MANAGEMENT = [
     {BOARD.map((member) => (
       <li>
         <div class="font-bold">{member.name}</div>
-        <div>{member.title}</div>
-        {member.post && <div>({member.post})</div>}
+        <div set:html={member.title} />
+        {member.post && <div set:html={`(${member.post})`} />}
       </li>
     ))}
   </ul>
@@ -61,7 +61,7 @@ const MANAGEMENT = [
     {MANAGEMENT.map((member) => (
       <li>
         <div class="font-bold">{member.name}</div>
-        <div>{member.title}</div>
+        <div set:html={member.title} />
       </li>
     ))}
   </ul>
