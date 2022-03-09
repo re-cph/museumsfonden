@@ -1,5 +1,4 @@
 ---
-import styles from "../styles/global.css";
 const currentPage = Astro.request.url.pathname;
 
 const MENU = [
@@ -19,10 +18,8 @@ const MENU = [
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Museumsfonden af 7. december 1966</title>
-    <link rel="stylesheet" href="/font-awesome-4.6.3/css/font-awesome.min.css"
-    />
-    <style set:html={styles}>
-
+    <style global>
+      @import "../styles/global.css";
     </style>
   </head>
   <body>
