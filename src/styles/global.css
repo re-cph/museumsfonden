@@ -51,6 +51,7 @@
 html,
 body {
   @apply font-body;
+  @apply bg-bg;
 }
 
 h1,
