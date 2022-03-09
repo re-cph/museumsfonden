@@ -1,3 +1,65 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-display: swap;
+  font-family: "Akkurat Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Akkurat Pro Regular"), local("AkkuratPro-Regular"),
+    url("/fonts/AkkuratPro-Regular.woff2") format("woff2"),
+    url("/fonts/AkkuratPro-Regular.woff") format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Akkurat Pro";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Akkurat Pro Bold"), local("AkkuratPro-Bold"),
+    url("/fonts/AkkuratPro-Bold.woff2") format("woff2"),
+    url("/fonts/AkkuratPro-Bold.woff") format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Akkurat Pro";
+  font-style: italic;
+  font-weight: 400;
+  src: local("Akkurat Pro Italic"), local("AkkuratPro-Italic"),
+    url("/fonts/AkkuratPro-Italic.woff2") format("woff2"),
+    url("/fonts/AkkuratPro-Italic.woff") format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Akkurat Pro";
+  font-style: italic;
+  font-weight: 700;
+  src: local("Akkurat Pro Bold Italic"), local("AkkuratPro-BoldItalic"),
+    url("/fonts/AkkuratPro-BoldItalic.woff2") format("woff2"),
+    url("/fonts/AkkuratPro-BoldItalic.woff") format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Gotham-Bold"), local("Gotham-Bold"),
+    url("/fonts/Gotham-Bold.woff2") format("woff2"),
+    url("/fonts/Gotham-Bold.woff") format("woff");
+}
+
+html,
+body {
+  @apply font-body;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
+  @apply font-header;
+  @apply font-bold;
+  @apply uppercase;
+}
