@@ -1,5 +1,17 @@
 ---
 import styles from "../styles/global.css";
+const currentPage = Astro.request.url.pathname;
+
+const MENU = [
+  { href: "/", name: "Forside" },
+  { href: "/formaal", name: "Formål" },
+  { href: "/vedtaegter", name: "Vedtægter" },
+  { href: "/bestyrelse-direktion", name: "Bestyrelse / Direktion" },
+  { href: "/aarsrapporter", name: "Årsrapporter" },
+  { href: "/governance", name: "Governance" },
+  { href: "/donation", name: "Donation" },
+  { href: "/deponering", name: "Deponering" },
+];
 ---
 
 <!DOCTYPE html>
@@ -13,17 +25,30 @@ import styles from "../styles/global.css";
 
     </style>
   </head>
-  <body class="container mx-auto">
-    <aside>
-      <a href="/">Forside</a>
-      <a href="/formaal">Formål</a>
-      <a href="/vedtaegter">Vedtægter</a>
-      <a href="/bestyrelse-direktion">Bestyrelse / Direktion</a>
-      <a href="/aarsrapporter">Årsrapporter</a>
-      <a href="/governance">Governance</a>
-      <a href="/donation">Donation</a>
-      <a href="/deponering">Deponering</a>
-    </aside>
-    <slot />
+  <body>
+    <div class="container sm:mx-auto sm:grid grid-cols-12 gap-6">
+      <h2 class="col-start-5 col-span-8 sm:mt-6 text-2xl">Museumsfonden</h2>
+      <aside class="col-span-4 row-start-2">
+        <nav>
+          <ul>
+            {MENU.map(({ href, name }) => (
+              <li>
+                <a
+                  class={`hover:opacity-50 ${
+                    currentPage === href ? "underline" : ""
+                  }`}
+                  href={`${href}`}
+                >
+                  {name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </aside>
+      <main class="col-start-5 col-span-8">
+        <slot />
+      </main>
+    </div>
   </body>
 </html>
