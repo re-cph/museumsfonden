@@ -52,6 +52,7 @@ html,
 body {
   @apply font-body;
   @apply bg-bg;
+  @apply text-body;
 }
 
 h1,
@@ -63,4 +64,10 @@ h5 {
   @apply font-header;
   @apply font-bold;
   @apply uppercase;
+  letter-spacing: 0.03em;
+}
+
+h1,
+h2 {
+  @apply text-header;
 }

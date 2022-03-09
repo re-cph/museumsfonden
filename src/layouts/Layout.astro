@@ -27,8 +27,8 @@ const MENU = [
   </head>
   <body>
     <div class="container sm:mx-auto sm:grid grid-cols-12 gap-6">
-      <h2 class="col-start-5 col-span-8 sm:mt-6 text-2xl">Museumsfonden</h2>
-      <aside class="col-span-4 row-start-2">
+      <h3 class="col-start-5 col-span-8 sm:mt-6 text-title">Museumsfonden</h3>
+      <aside class="col-span-4 row-start-2 text-menu">
         <nav>
           <ul>
             {MENU.map(({ href, name }) => (
@@ -46,7 +46,7 @@ const MENU = [
           </ul>
         </nav>
       </aside>
-      <main class="col-start-5 col-span-8">
+      <main class="col-start-5 col-span-8 space-y-6">
         <slot />
       </main>
     </div>
