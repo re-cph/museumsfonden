@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Image from "../components/Image.astro";
+import img from "../../public/images/aarsrapport.jpg";
 
 const REPORTS = [
   { name: "Årsrapport 2020", pdf: "/pdf/MuseumsFonden_aarsrapport_2020.pdf" },
@@ -18,6 +20,8 @@ const REPORTS = [
 ---
 
 <Layout>
+  <Image src={img} />
+
   <h1>Årsrapport</h1>
 
   <p>Her finder du årsrapporterne fra:</p>

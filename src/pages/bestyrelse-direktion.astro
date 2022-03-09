@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Image from "../components/Image.astro";
+import img from "../../public/images/bestyrelse.jpg";
 
 const BOARD = [
   {
@@ -40,7 +42,10 @@ const MANAGEMENT = [
 ---
 
 <Layout>
+  <Image src={img} />
+
   <h1>Bestyrelse</h1>
+
   <ul class="sm:grid grid-cols-2 gap-6">
     {BOARD.map((member) => (
       <li>
