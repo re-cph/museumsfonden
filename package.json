@@ -1,0 +1,17 @@
+{
+  "name": "Museumsfonden",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "astro": "^0.23.7",
+    "prettier": "^2.5.1",
+    "prettier-plugin-astro": "^0.0.12"
+  },
+  "dependencies": {}
+}
