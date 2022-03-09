@@ -46,7 +46,7 @@ const MANAGEMENT = [
 
   <h1>Bestyrelse</h1>
 
-  <ul class="sm:grid grid-cols-2 gap-6">
+  <ul class="grid grid-cols-1 sm:grid-cols-2 gap-6">
     {BOARD.map((member) => (
       <li>
         <div class="font-bold">{member.name}</div>
@@ -57,7 +57,7 @@ const MANAGEMENT = [
   </ul>
 
   <h2 class="pt-6">Direktion</h2>
-  <ul class="sm:grid grid-cols-2 gap-6">
+  <ul class="grid grid-cols-1 sm:grid-cols-2 gap-6">
     {MANAGEMENT.map((member) => (
       <li>
         <div class="font-bold">{member.name}</div>
