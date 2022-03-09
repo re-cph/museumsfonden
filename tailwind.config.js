@@ -18,6 +18,7 @@ module.exports = {
       body: ["18px", "1.7em"],
       header: ["24px", "1.7em"],
       title: ["20px", "1.7em"],
+      caption: ["12px", "1.7em"],
     },
     colors: {
       transparent: "transparent",
@@ -25,6 +26,11 @@ module.exports = {
       white: "#ffffff",
       black: "#000000",
       bg: "#FBF9F7",
+    },
+    extend: {
+      dropShadow: {
+        menu: "0 3px 2px rgb(0 0 0 / 0.1)",
+      },
     },
   },
 };

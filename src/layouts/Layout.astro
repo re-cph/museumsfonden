@@ -23,10 +23,25 @@ const MENU = [
     </style>
   </head>
   <body>
-    <div class="container sm:mx-auto sm:grid grid-cols-12 gap-6">
-      <h3 class="col-start-5 col-span-8 sm:mt-6 text-title">Museumsfonden</h3>
-      <aside class="col-span-4 row-start-2 text-menu">
-        <nav>
+    <div class="container mt-6 sm:mt-0 sm:mx-auto grid grid-cols-12 gap-6">
+      <h3
+        class="col-span-11 sm:col-span-8 sm:col-start-4 lg:col-start-3 sm:mt-6 text-title"
+      >
+        Museumsfonden
+      </h3>
+      <aside
+        class="col-span-1 sm:col-span-3 lg:col-span-2 self-center sm:self-auto sm:row-start-2 text-menu"
+        id="menu"
+      >
+        <input type="checkbox" id="menuCheckbox" class="hidden" />
+        <label for="menuCheckbox" class="sm:hidden">
+          <div class="w-5 h-[2px] mb-1 bg-black"></div>
+          <div class="w-5 h-[2px] mb-1 bg-black"></div>
+          <div class="w-5 h-[2px] bg-black"></div>
+        </label>
+        <nav
+          class="absolute sm:static z-10 left-0 right-0 bg-bg px-4 py-4 drop-shadow-menu sm:drop-shadow-none"
+        >
           <ul>
             {MENU.map(({ href, name }) => (
               <li>
@@ -43,7 +58,9 @@ const MENU = [
           </ul>
         </nav>
       </aside>
-      <main class="col-start-5 col-span-8 space-y-6">
+      <main
+        class="col-span-full sm:col-start-4 sm:col-span-9 lg:col-start-3 lg:col-span-10 space-y-6"
+      >
         <slot />
       </main>
     </div>
