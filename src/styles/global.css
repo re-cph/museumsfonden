@@ -82,12 +82,15 @@ main a:hover {
 
 #menu nav {
   transform: scaleY(0);
+  opacity: 0;
   @apply transition;
+  @apply duration-300;
   @apply origin-top;
 }
 
 #menu input:checked ~ nav {
   transform: scaleY(1);
+  opacity: 1;
 }
 
 @media (min-width: 768px) {
