@@ -29,9 +29,9 @@ const MENU = [
     class="bg-bg mt-4 pl-6 py-4 border-b border-t border-grey sm:border-0 sm:mt-0 duration-300 mb-6"
     id="menuContainer"
   >
-    <ul>
+    <ul class="space-y-2">
       {MENU.map(({ href, name }) => (
-        <li>
+        <li class="leading-tight">
           <a
             class={`hover:opacity-50 ${
               currentPage === href ? "underline" : ""
