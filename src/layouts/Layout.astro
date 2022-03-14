@@ -1,16 +1,5 @@
 ---
-const currentPage = Astro.request.url.pathname;
-
-const MENU = [
-  { href: "/", name: "Forside" },
-  { href: "/formaal", name: "Formål" },
-  { href: "/vedtaegter", name: "Vedtægter" },
-  { href: "/bestyrelse-direktion", name: "Bestyrelse / Direktion" },
-  { href: "/aarsrapporter", name: "Årsrapporter" },
-  { href: "/governance", name: "Governance" },
-  { href: "/donation", name: "Donation" },
-  { href: "/deponering", name: "Deponering" },
-];
+import MainNavigation from "../components/MainNavigation.astro";
 ---
 
 <!DOCTYPE html>
@@ -24,41 +13,14 @@ const MENU = [
     </style>
   </head>
   <body>
-    <div class="container mt-6 sm:mt-0 sm:mx-auto grid grid-cols-12 gap-6">
+    <div class="container sm:mt-0 sm:mx-auto grid grid-cols-12 sm:gap-6">
       <h3
-        class="col-span-11 sm:col-span-8 sm:col-start-4 lg:col-start-3 sm:mt-6 text-title"
+        class="col-span-12 sm:col-span-9 sm:col-start-4 lg:col-start-3 py-6 sm:py-0 sm:mt-6 text-title relative bg-bg"
       >
         Museumsfonden
       </h3>
-      <aside
-        class="col-span-1 sm:col-span-3 lg:col-span-2 justify-self-end sm:justify-self-none self-center sm:self-auto sm:row-start-2 text-menu"
-        id="menu"
-      >
-        <input type="checkbox" id="menuCheckbox" class="hidden" />
-        <label for="menuCheckbox" class="sm:hidden">
-          <div class="w-5 h-[2px] mb-1 bg-black"></div>
-          <div class="w-5 h-[2px] mb-1 bg-black"></div>
-          <div class="w-5 h-[2px] bg-black"></div>
-        </label>
-        <nav
-          class="absolute sm:static z-10 left-0 right-0 bg-bg mt-4 px-4 pb-4 drop-shadow-menu sm:drop-shadow-none"
-        >
-          <ul>
-            {MENU.map(({ href, name }) => (
-              <li>
-                <a
-                  class={`hover:opacity-50 ${
-                    currentPage === href ? "underline" : ""
-                  }`}
-                  href={`${href}`}
-                >
-                  {name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </aside>
+      <MainNavigation client:load />
+
       <main
         class="col-span-full sm:col-start-4 sm:col-span-9 lg:col-start-3 lg:col-span-10 space-y-6"
       >
