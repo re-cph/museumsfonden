@@ -8,9 +8,11 @@ import MainNavigation from "../components/MainNavigation.astro";
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Museumsfonden af 7. december 1966</title>
-    <style global>
-      @import "../styles/global.css";
-    </style>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href={Astro.resolve("../styles/global.css")}
+    />
   </head>
   <body>
     <div class="container sm:mt-0 sm:mx-auto grid grid-cols-12 sm:gap-6">
@@ -22,7 +24,7 @@ import MainNavigation from "../components/MainNavigation.astro";
       <MainNavigation client:load />
 
       <main
-        class="col-span-full sm:col-start-4 sm:col-span-9 lg:col-start-3 lg:col-span-10 space-y-6"
+        class="col-span-full sm:col-start-4 sm:col-span-9 lg:col-start-3 lg:col-span-10 space-y-6 mb-20"
       >
         <slot />
       </main>

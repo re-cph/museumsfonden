@@ -26,7 +26,7 @@ const MENU = [
     <div></div>
   </label>
   <nav
-    class="bg-bg mt-4 pl-6 py-4 border-b border-t border-grey sm:border-0 sm:mt-0 duration-300 mb-6"
+    class="bg-bg mt-4 pl-6 py-4 border-b border-t border-grey sm:border-0 sm:mt-0 duration-300 mb-6 sm:transition-none"
     id="menuContainer"
   >
     <ul class="space-y-2">
@@ -68,6 +68,9 @@ const MENU = [
     nav.opened {
       margin-top: 0;
     }
+    label div {
+      transition: all 0.3s ease;
+    }
   }
 
   label {
@@ -79,7 +82,6 @@ const MENU = [
     position: relative;
     top: 0;
     background-color: #000;
-    transition: all 0.3s ease;
     border-radius: 2px;
     width: 24px;
     background-color: #000;
