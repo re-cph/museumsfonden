@@ -2,10 +2,11 @@
 const {
   src,
   caption = "Pariatur incididunt reprehenderit pariatur aliqua Lorem non minim.",
+  ratio = 2,
 } = Astro.props;
 ---
 
 <figure class="space-y-3">
-  <img {src} style="width: 100%; aspect-ratio: 2;" />
+  <img {src} style={`width: 100%; aspect-ratio: ${ratio};`} />
   {caption && <figcaption class="text-caption">{caption}</figcaption>}
 </figure>

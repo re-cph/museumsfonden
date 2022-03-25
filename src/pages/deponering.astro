@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import Image from "../components/Image.astro";
 import img from "../images/deponering.jpg";
+import imgContent1 from "../images/deponering_content_1.jpg";
+import imgContent2 from "../images/deponering_content_2.jpg";
 ---
 
 <Layout>
@@ -41,4 +43,30 @@ import img from "../images/deponering.jpg";
       Museumsfondens værker deponeret på andre danske kunstmuseer
     </a>
   </p>
+
+  <div class="flex justify-between">
+    <div class="content-image-1">
+      <Image
+        src={imgContent1}
+        caption="’Bryllupskareten’ af Henry Heerup fra 1963. Deponeret af Museumsfonden på Carl-Henning Pedersen og Else Alfelts Museum i Herning. © Henry Heerup / VISDA"
+        ratio={746 / 750}
+      />
+    </div>
+    <div class="content-image-2">
+      <Image
+        src={imgContent2}
+        caption="’Effort Commun’ en bronze af Sonja Ferlov Mancoba fra 1963/1964. Deponeret af Museumsfonden på Bornholms Kunstmuseum © Sonja Ferlov Mancoba/VISDA"
+        ratio={666 / 750}
+      />
+    </div>
+  </div>
 </Layout>
+
+<style>
+  .content-image-1 {
+    flex-basis: calc((749 / 1440) * 100%);
+  }
+  .content-image-2 {
+    flex-basis: calc((666 / 1440) * 100%);
+  }
+</style>
