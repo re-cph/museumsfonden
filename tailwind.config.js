@@ -4,7 +4,7 @@ module.exports = {
     screens: {
       sm: "768px",
       md: "1024px",
-      lg: "1440px",
+      lg: "1200px",
     },
     container: {
       padding: "1rem",
@@ -26,11 +26,8 @@ module.exports = {
       white: "#ffffff",
       black: "#000000",
       bg: "#FBF9F7",
+      grey: "#DDD",
     },
-    extend: {
-      dropShadow: {
-        menu: "0 3px 2px rgb(0 0 0 / 0.1)",
-      },
-    },
+    extend: {},
   },
 };

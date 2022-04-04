@@ -1,28 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Image from "../components/Image.astro";
-import img from "../../public/images/aarsrapport.jpg";
+import img from "../images/aarsrapport.jpg";
 
 const REPORTS = [
   { name: "Årsrapport 2020", pdf: "/pdf/MuseumsFonden_aarsrapport_2020.pdf" },
   { name: "Årsrapport 2019", pdf: "/pdf/MuseumsFonden_aarsrapport_2019.pdf" },
   { name: "Årsrapport 2018", pdf: "/pdf/MuseumsFonden_aarsrapport_2018.pdf" },
-  { name: "Årsrapport 2017", pdf: "/pdf/Museumsfonden_2017_Komplet.pdf" },
-  {
-    name: "Årsrapport 2016",
-    pdf: "/pdf/MuseumsFonden_af_1966_aarsrapport_2016.pdf",
-  },
-  {
-    name: "Årsrapport 2015",
-    pdf: "/pdf/Museumsfonden_ekstern_samlet_2015.pdf",
-  },
+  { name: "Årsrapport 2017", pdf: "/pdf/MuseumsFonden_aarsrapport_2017.pdf" },
+  { name: "Årsrapport 2016", pdf: "/pdf/MuseumsFonden_aarsrapport_2016.pdf" },
+  { name: "Årsrapport 2015", pdf: "/pdf/MuseumsFonden_aarsrapport_2015.pdf" },
 ];
 ---
 
 <Layout>
-  <Image src={img} />
+  <Image
+    src={img}
+    caption="Støtte fra Museumsfonden og Ny Carlsbergfondet gjorde det muligt for Louisiana at erhverve tre træer af Ai Weiwei, der blev vist på museets udstilling med den kinesiske samtidskunster i 2011. Foto: Poul Buchard."
+  />
 
-  <h1>Årsrapport</h1>
+  <h1>Årsrapporter</h1>
 
   <p>Her finder du årsrapporterne fra:</p>
 

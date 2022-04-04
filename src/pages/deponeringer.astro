@@ -1,0 +1,72 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Image from "../components/Image.astro";
+import img from "../images/deponeringer.jpg";
+import imgContent1 from "../images/deponeringer_content_1.jpg";
+import imgContent2 from "../images/deponeringer_content_2.jpg";
+---
+
+<Layout>
+  <Image
+    src={img}
+    caption="Andy Warhols ikoniske portræt ’Mao’ fra 1972 (akryl og silketryk på hørlærred) er én af Museusmfondens mange deponeringer på Louisiana. © The Andy Warhol Foundation for the Visual Arts, Inc. / ARS / VISDA"
+  />
+
+  <h1>Deponeringer</h1>
+
+  <p>
+    En række hovedværker i Louisianas samling er deponeringer fra Museumsfonden.
+    Det drejer sig om værker af bl.a. Andy Warhol, Alexander Calder, Gerhard
+    Richter, Yves Klein, Picasso og Miró.
+  </p>
+
+  <p>
+    <a href="/pdf/Museumsfonden_deponeret_på_museet_2022.pdf">
+      Museumsfondens værker deponeret på Louisiana
+    </a>
+  </p>
+
+  <p>
+    I henhold til formålet med Museumsfonden, som det fremgår af vedtægterne,
+    kan der også deponeres værker i andre institutioner, der viser interesse for
+    moderne kunst.
+  </p>
+
+  <p>
+    Værker af en række danske kunstnere er således af Museumsfonden deponeret på
+    museer rundt om i landet, f.eks. på Bornholms Kunstmuseum, Holstebro
+    Kunstmuseum og Tønder Kunstmuseum.
+  </p>
+
+  <p>
+    <a href="/pdf/Værker_deponeret_af_Museumsfonden_2022.pdf">
+      Museumsfondens værker deponeret på andre danske kunstmuseer
+    </a>
+  </p>
+
+  <div class="sm:flex justify-between">
+    <div class="content-image-1 mb-4 normal:mb-0">
+      <Image
+        src={imgContent1}
+        caption="’Bryllupskareten’ af Henry Heerup fra 1963. Deponeret af Museumsfonden på Carl-Henning Pedersen og Else Alfelts Museum i Herning. © Henry Heerup / VISDA"
+        ratio={746 / 750}
+      />
+    </div>
+    <div class="content-image-2">
+      <Image
+        src={imgContent2}
+        caption="’Effort Commun’ en bronze af Sonja Ferlov Mancoba fra 1963/1964. Deponeret af Museumsfonden på Bornholms Kunstmuseum © Sonja Ferlov Mancoba/VISDA"
+        ratio={666 / 750}
+      />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .content-image-1 {
+    flex-basis: calc((749 / 1440) * 100%);
+  }
+  .content-image-2 {
+    flex-basis: calc((666 / 1440) * 100%);
+  }
+</style>

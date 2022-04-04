@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Image from "../components/Image.astro";
-import img from "../../public/images/bestyrelse.jpg";
+import img from "../images/bestyrelse.jpg";
 
 const BOARD = [
   {
@@ -42,7 +42,10 @@ const MANAGEMENT = [
 ---
 
 <Layout>
-  <Image src={img} />
+  <Image
+    src={img}
+    caption="Museumsfonden har deponeret en række værker af den franske maler og billedhugger Jean Dubuffet (1901-1985) på Louisiana – mest markant den store figur ’Manoir d’Essor’ fra 1969/1982. Foto: Kim Hansen."
+  />
 
   <h1>Bestyrelse</h1>
 
@@ -50,8 +53,8 @@ const MANAGEMENT = [
     {BOARD.map((member) => (
       <li>
         <div class="font-bold">{member.name}</div>
-        <div>{member.title}</div>
-        {member.post && <div>({member.post})</div>}
+        <div set:html={member.title} />
+        {member.post && <div set:html={`(${member.post})`} />}
       </li>
     ))}
   </ul>
@@ -61,7 +64,7 @@ const MANAGEMENT = [
     {MANAGEMENT.map((member) => (
       <li>
         <div class="font-bold">{member.name}</div>
-        <div>{member.title}</div>
+        <div set:html={member.title} />
       </li>
     ))}
   </ul>

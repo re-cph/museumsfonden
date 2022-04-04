@@ -1,48 +1,51 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Image from "../components/Image.astro";
-import img from "../../public/images/governance.jpg";
+import img from "../images/governance.jpg";
 
 const REPORTS = [
   {
     name: "Lovpligtig redegørelse for god fondsledelse 2021",
-    pdf: "pdf/skema_god_fondsledelse_MF_2021.pdf",
+    pdf: "/pdf/skema_god_fondsledelse_MF_2021.pdf",
   },
   {
     name: "Lovpligtig redegørelse for god fondsledelse 2020",
-    pdf: "pdf/skema_god_fondsledelse_MF_2020.pdf",
+    pdf: "/pdf/skema_god_fondsledelse_MF_2020.pdf",
   },
   {
     name: "Lovpligtig redegørelse for god fondsledelse 2019",
-    pdf: "pdf/skema_god_fondsledelse_MF_2019.pdf",
+    pdf: "/pdf/skema_god_fondsledelse_MF_2019.pdf",
   },
   {
     name: "Lovpligtig redegørelse for god fondsledelse 2018",
-    pdf: "pdf/skema_god_fondsledelse_MF_2018.pdf",
+    pdf: "/pdf/skema_god_fondsledelse_MF_2018.pdf",
   },
   {
     name: "Lovpligtig redegørelse for god fondsledelse 2017",
-    pdf: "pdf/skema_god_fondsledelse_MF_2017.pdf",
+    pdf: "/pdf/skema_god_fondsledelse_MF_2017.pdf",
   },
   {
     name: "Lovpligtig redegørelse for god fondsledelse 2016",
-    pdf: "pdf/skema god fondsledelse MF 2016.pdf",
+    pdf: "/pdf/skema_god_fondsledelse_MF_2016.pdf",
   },
   {
     name: "Lovpligtig redegørelse for god fondsledelse 2015",
-    pdf: "pdf/skema god fondsledelse MF 2015.pdf",
+    pdf: "/pdf/skema_god_fondsledelse_MF_2015.pdf",
   },
 ];
 ---
 
 <Layout>
-  <Image src={img} />
+  <Image
+    src={img}
+    caption="Blandt de mest markante og ikoniske af Museumsfondens deponeringer på Louisiana ses her (i forgrunden) Gerhard Richters ’1025 Farben’ fra 1974 samt Yves Kleins tre ”monokromer” fra 1960:  ’Grand Monopink’, ’Frémissement’ samt ’Untitled Blue Monochrome’. Foto: Poul Buchard."
+  />
 
   <h1>Governance</h1>
 
   <p>
     Fonden er omfattet af erhvervsfondslovens og årsregnskabslovens bestemmelser
-    om god fondsledelse. Fonden skal derfor redegøre for, hvordan vi lever op
+    om god fondsledelse. Fonden skal derfor redegøre for, hvordan den lever op
     til anbefalingerne fra Komitéen for God Fondsledelse.
   </p>
 

@@ -79,19 +79,3 @@ main a {
 main a:hover {
   @apply opacity-50;
 }
-
-#menu nav {
-  transform: scaleY(0);
-  @apply transition;
-  @apply origin-top;
-}
-
-#menu input:checked ~ nav {
-  transform: scaleY(1);
-}
-
-@media (min-width: 768px) {
-  #menu input ~ nav {
-    transform: scaleY(1);
-  }
-}

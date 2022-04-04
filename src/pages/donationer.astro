@@ -1,0 +1,62 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Image from "../components/Image.astro";
+import img from "../images/donationer.jpg";
+import imgContent1 from "../images/donationer_content_1.jpg";
+import imgContent2 from "../images/donationer_content_2.jpg";
+---
+
+<Layout>
+  <Image
+    src={img}
+    caption="Den samlede støtte fra Museumsfonden samt donationer via louisiana.dk og midler fra salg af Louisiana Editions gjorde det muligt at erhverve Alicja Kwades værk ’Pars Pro Toto’, de otte stenglober fra 2018, der indgik i museets store udstilling om Månen samme år."
+  />
+
+  <h1>Donationer</h1>
+
+  <p>
+    Ifølge Museumsfondens vedtægter påhviler det til stadighed fondens
+    bestyrelse at vedligeholde og ”om muligt højne kvaliteten” af museets
+    kunstsamling.
+  </p>
+
+  <p>
+    Med dette for øje har fonden gennem årene skænket værker til Louisiana og
+    udloddet midler således, at museet løbende selv har kunnet erhverve værker
+    og dermed kunnet styrke og udvide sin samling.
+  </p>
+
+  <p>
+    Det er således i de senere år – netop med midler fra Museumsfonden –
+    lykkedes at føje kunstnere til samlingen, som har været repræsenteret på
+    udstillingsprogrammet i perioden. Det drejer sig om bl.a. Alicja Kwade,
+    Mamma Andersson, Ian Cheng, Annegret Soltau, Pipilotti Rist, Tetsumi Kudo,
+    Ann-Veronica Janssens og Arthur Jafa.
+  </p>
+
+  <div class="sm:flex justify-between">
+    <div class="content-image-1 mb-4 normal:mb-0">
+      <Image
+        src={imgContent1}
+        caption="Arthur Jafa (f. 1960), der regnes som en af samtidskunstens vigtigste stemmer, blev præsenteret på den store udstilling MAGNUMB på Louisiana i 2021. Et af hans hovedværker ’APEX’ fra 2013 er erhvervet til museets samling med midler fra Museumsfonden."
+        ratio={1069 / 533}
+      />
+    </div>
+    <div class="content-image-2">
+      <Image
+        src={imgContent2}
+        caption="Museumsfonden har støttet indkøbet af ’Golden Dream’ (glas, paraffinolie og serigrafi i guld) af belgiske Ann-Veronica Janssens (f. 1956), som udstillede på Louisiana i 2020."
+        ratio={356 / 533}
+      />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .content-image-1 {
+    flex-basis: calc((1069 / 1460) * 100%);
+  }
+  .content-image-2 {
+    flex-basis: calc((361 / 1460) * 100%);
+  }
+</style>
